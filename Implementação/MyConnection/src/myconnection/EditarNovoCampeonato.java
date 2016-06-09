@@ -178,7 +178,7 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
         stat.execute();
         
         //criação bem sucedida
-        JOptionPane.showMessageDialog(null, "Campeonato criado!","Novo Camepeonato", 1);
+        
         
         }catch(Exception e) {
            System.err.println("Erro");
