@@ -204,6 +204,8 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
         //O usuário informa o número de itens/times que a lista/campeonato terá
         String value1 = jTextField2.getText();
         //O switch-case fará a verificação e adição de times
+        String value2 = "";
+        String value3;
         switch(value1){
 
             case "1":
@@ -215,6 +217,7 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
             break;
 
             case "3":
+            
             TimeList.addElement("Time1");
             TimeList.addElement("Time2");
             TimeList.addElement("Time3");
@@ -531,7 +534,10 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EditarNovoCampeonato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        
+        
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
