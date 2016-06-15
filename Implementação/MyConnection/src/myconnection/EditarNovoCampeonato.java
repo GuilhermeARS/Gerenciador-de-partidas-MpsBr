@@ -11,10 +11,13 @@
 package myconnection;
 
 
+import java.awt.List;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
@@ -23,12 +26,15 @@ import javax.swing.JOptionPane;
  * @author Augusto César da Fonseca Falcão
  */
 public class EditarNovoCampeonato extends javax.swing.JFrame {
+       ArrayList<String> lista = new ArrayList<String>();
+   
 
     /**
      * Creates new form EditarNovoCampeonato
      */
     public EditarNovoCampeonato() {
         initComponents();
+        
     }
 
     /**
@@ -49,8 +55,33 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField17 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
+        jTextField21 = new javax.swing.JTextField();
+        jTextField22 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -103,30 +134,131 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jTextField3.setText("Time 1");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jTextField3.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jTextField3InputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+
+        jTextField4.setText("Time 2");
+
+        jTextField5.setText("Time 3");
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
+        jTextField6.setText("Time 4");
+
+        jTextField7.setText("Time 5");
+
+        jTextField8.setText("Time 6");
+
+        jTextField9.setText("Time 7");
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+
+        jTextField10.setText("Time 8");
+
+        jTextField11.setText("Time 9");
+
+        jTextField12.setText("Time 10");
+
+        jTextField13.setText("Time 11");
+
+        jTextField14.setText("Time 12");
+
+        jTextField15.setText("Time 13");
+
+        jTextField16.setText("Time 14");
+
+        jTextField17.setText("Time 15");
+
+        jTextField18.setText("Time 16");
+        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField18ActionPerformed(evt);
+            }
+        });
+
+        jTextField19.setText("Time 17");
+
+        jTextField20.setText("Time 18");
+
+        jTextField21.setText("Time 19");
+        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField21ActionPerformed(evt);
+            }
+        });
+
+        jTextField22.setText("Time 20");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(32, 32, 32))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addGap(24, 24, 24)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(141, 141, 141)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                                .addGap(32, 32, 32))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(87, 87, 87)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField2)
+                                    .addComponent(jTextField1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(83, 83, 83)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                                    .addComponent(jTextField11)
+                                    .addComponent(jTextField10)
+                                    .addComponent(jTextField9)
+                                    .addComponent(jTextField8)
+                                    .addComponent(jTextField7)
+                                    .addComponent(jTextField6)
+                                    .addComponent(jTextField5)
+                                    .addComponent(jTextField4)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jTextField3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField22, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                                    .addComponent(jTextField21)
+                                    .addComponent(jTextField20)
+                                    .addComponent(jTextField19)
+                                    .addComponent(jTextField18)
+                                    .addComponent(jTextField17)
+                                    .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField14, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField15, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField16))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -138,16 +270,55 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -158,21 +329,806 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
+    
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
          //instancia conexão
          Connection con = MyConnection.getMyConnection();
+         
+         DefaultListModel TimeList = new DefaultListModel();
+        for(int i = 0; i < jList1.getModel().getSize(); i++) {
+            TimeList.addElement(jList1.getModel().getElementAt(i));
+        }
+        
         try{
+            String value = jTextField2.getText();    
+          switch (value){
+
+            case "3":  
         //variáveis de armazenamento de valores string     
-        String value1 = jTextField1.getText();
-       
+        String value1 = jTextField3.getText();
+        String value2 = jTextField4.getText();
+        String value3 = jTextField5.getText();
+        
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        
+        jList1.setModel(TimeList);
         
         //intrução sql
-        String query = "INSERT INTO tab_camp(CAMP_NOME)"+"VALUES (?)";
+        String query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?),(?),(?)";
         
         //armazenamento
         PreparedStatement stat = con.prepareStatement(query);
-        stat.setString(1, value1);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        stat.execute();
+                break;
+                
+            case "4":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        String value4 = jTextField6.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;      
+                
+        case "5":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        String value5 = jTextField7.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;  
+            
+        case "6":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        String value6 = jTextField8.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;    
+            
+        case "7":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        String value7 = jTextField9.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;  
+            
+        case "8":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        String value8 = jTextField10.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "9":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        String value9 = jTextField11.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;    
+            
+        case "10":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        String value10 = jTextField12.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "11":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        String value11 = jTextField13.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "12":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        String value12 = jTextField14.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "13":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        String value13 = jTextField15.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "14":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        String value14 = jTextField16.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "15":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        value14 = jTextField16.getText();
+        String value15 = jTextField17.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        TimeList.addElement(value15);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "16":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        value14 = jTextField16.getText();
+        value15 = jTextField17.getText();
+        String value16 = jTextField18.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        TimeList.addElement(value15);
+        TimeList.addElement(value16);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "17":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        value14 = jTextField16.getText();
+        value15 = jTextField17.getText();
+        value16 = jTextField18.getText();
+        String value17 = jTextField19.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        TimeList.addElement(value15);
+        TimeList.addElement(value16);
+        TimeList.addElement(value17);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "18":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        value14 = jTextField16.getText();
+        value15 = jTextField17.getText();
+        value16 = jTextField18.getText();
+        value17 = jTextField19.getText();
+        String value18 = jTextField20.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        TimeList.addElement(value15);
+        TimeList.addElement(value16);
+        TimeList.addElement(value17);
+        TimeList.addElement(value18);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "19":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        value14 = jTextField16.getText();
+        value15 = jTextField17.getText();
+        value16 = jTextField18.getText();
+        value17 = jTextField19.getText();
+        value18 = jTextField20.getText();
+        String value19 = jTextField21.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        TimeList.addElement(value15);
+        TimeList.addElement(value16);
+        TimeList.addElement(value17);
+        TimeList.addElement(value18);
+        TimeList.addElement(value19);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;
+            
+        case "20":
+        //variáveis de armazenamento de valores string     
+        value1 = jTextField3.getText();
+        value2 = jTextField4.getText();
+        value3 = jTextField5.getText();
+        value4 = jTextField6.getText();
+        value5 = jTextField7.getText();
+        value6 = jTextField8.getText();
+        value7 = jTextField9.getText();
+        value8 = jTextField10.getText();
+        value9 = jTextField11.getText();
+        value10 = jTextField12.getText();
+        value11 = jTextField13.getText();
+        value12 = jTextField14.getText();
+        value13 = jTextField15.getText();
+        value14 = jTextField16.getText();
+        value15 = jTextField17.getText();
+        value16 = jTextField18.getText();
+        value17 = jTextField19.getText();
+        value18 = jTextField20.getText();
+        value19 = jTextField21.getText();
+        String value20 = jTextField22.getText();
+         
+        TimeList.addElement(value1);
+        TimeList.addElement(value2);
+        TimeList.addElement(value3);
+        TimeList.addElement(value4);
+        TimeList.addElement(value5);
+        TimeList.addElement(value6);
+        TimeList.addElement(value7);
+        TimeList.addElement(value8);
+        TimeList.addElement(value9);
+        TimeList.addElement(value10);
+        TimeList.addElement(value11);
+        TimeList.addElement(value12);
+        TimeList.addElement(value13);
+        TimeList.addElement(value14);
+        TimeList.addElement(value15);
+        TimeList.addElement(value16);
+        TimeList.addElement(value17);
+        TimeList.addElement(value18);
+        TimeList.addElement(value19);
+        TimeList.addElement(value20);
+        
+        jList1.setModel(TimeList);
+        
+        //intrução sql
+        query = "INSERT INTO tab_time(TIME_NOME)"+"VALUES (?)";    
+        
+        //armazenamento
+         
+        
+        stat = con.prepareStatement(query);
+        stat.setString(1, TimeList.getElementAt(0).toString());
+        
+        
+        stat.execute();
+        
+                break;    
+          } 
+        //criação bem sucedida
+          
+          
+        //variáveis de armazenamento de valores string     
+        String value100 = jTextField1.getText();
+        String value200 = jTextField2.getText();
+        
+        //intrução sql
+        String query = "INSERT INTO tab_camp(CAMP_NOME)"+"VALUES (?)";
+        String query2 = "INSERT INTO tab_camp(CAMP_QUANT_TIME)"+"VALUES (?)";
+        //armazenamento
+        PreparedStatement stat = con.prepareStatement(query);
+        PreparedStatement stat2 = con.prepareStatement(query);
+        
+        stat.setString(1, value100);
+        stat2.setString(2, value200);
         
         
         stat.execute();
@@ -192,7 +1148,8 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jTextField2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextField2PropertyChange
-        // TODO add your handling code here:
+        // TODO add your handling code here:    private void jTextField2PropertyChange(java.beans.PropertyChangeEvent evt) {                                           
+
     }//GEN-LAST:event_jTextField2PropertyChange
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -217,283 +1174,269 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
             break;
 
             case "3":
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);
             
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            jList1.setModel(TimeList);
+            //TimeList.addElement("Time1");
+            //TimeList.addElement("Time2");
+            //TimeList.addElement("Time3");
+            //jList1.setModel(TimeList);
             break;
 
             case "4":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
             break;
 
             case "5":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
             break;
 
             case "6":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
             break;
 
             case "7":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
             break;
 
             case "8":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
             break;
 
             case "9":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
             break;
 
             case "10":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
             break;
 
             case "11":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
             break;
 
             case "12":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
             break;
 
             case "13":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
             break;
                 
             case "14":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
             break;
                   
             case "15":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            TimeList.addElement("Time15");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
+            jTextField17.setVisible(true);
             break;    
                 
             case "16":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            TimeList.addElement("Time15");
-            TimeList.addElement("Time16");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
+            jTextField17.setVisible(true);
+            jTextField18.setVisible(true);
             break;    
                 
             case "17":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            TimeList.addElement("Time15");
-            TimeList.addElement("Time16");
-            TimeList.addElement("Time17");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
+            jTextField17.setVisible(true);
+            jTextField18.setVisible(true);
+            jTextField19.setVisible(true);
             break;        
              
             case "18":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            TimeList.addElement("Time15");
-            TimeList.addElement("Time16");
-            TimeList.addElement("Time17");
-            TimeList.addElement("Time18");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
+            jTextField17.setVisible(true);
+            jTextField18.setVisible(true);
+            jTextField19.setVisible(true);
+            jTextField20.setVisible(true);
             break;    
                 
             case "19":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            TimeList.addElement("Time15");
-            TimeList.addElement("Time16");
-            TimeList.addElement("Time17");
-            TimeList.addElement("Time18");
-            TimeList.addElement("Time19");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
+            jTextField17.setVisible(true);
+            jTextField18.setVisible(true);
+            jTextField19.setVisible(true);
+            jTextField20.setVisible(true);
+            jTextField21.setVisible(true);
             break;    
             
             case "20":
-            TimeList.addElement("Time1");
-            TimeList.addElement("Time2");
-            TimeList.addElement("Time3");
-            TimeList.addElement("Time4");
-            TimeList.addElement("Time5");
-            TimeList.addElement("Time6");
-            TimeList.addElement("Time7");
-            TimeList.addElement("Time8");
-            TimeList.addElement("Time9");
-            TimeList.addElement("Time10");
-            TimeList.addElement("Time11");
-            TimeList.addElement("Time12");
-            TimeList.addElement("Time13");
-            TimeList.addElement("Time14");
-            TimeList.addElement("Time15");
-            TimeList.addElement("Time16");
-            TimeList.addElement("Time17");
-            TimeList.addElement("Time18");
-            TimeList.addElement("Time19");
-            TimeList.addElement("Time20");
-            jList1.setModel(TimeList);
+            jTextField3.setVisible(true);
+            jTextField4.setVisible(true);
+            jTextField5.setVisible(true);    
+            jTextField6.setVisible(true);
+            jTextField7.setVisible(true);
+            jTextField8.setVisible(true);
+            jTextField9.setVisible(true);
+            jTextField10.setVisible(true);
+            jTextField11.setVisible(true);
+            jTextField12.setVisible(true);
+            jTextField13.setVisible(true);
+            jTextField14.setVisible(true);
+            jTextField15.setVisible(true);
+            jTextField16.setVisible(true);
+            jTextField17.setVisible(true);
+            jTextField18.setVisible(true);
+            jTextField19.setVisible(true);
+            jTextField20.setVisible(true);
+            jTextField21.setVisible(true);
+            jTextField22.setVisible(true);
             break; 
                  
             default:    
@@ -507,6 +1450,55 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
        // TODO add your handling code here:
     }//GEN-LAST:event_jList1MouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        jTextField3.setVisible(false);
+        jTextField4.setVisible(false);
+        jTextField5.setVisible(false);
+        jTextField6.setVisible(false);
+        jTextField7.setVisible(false);
+        jTextField8.setVisible(false);
+        jTextField9.setVisible(false);
+        jTextField10.setVisible(false);
+        jTextField11.setVisible(false);
+        jTextField12.setVisible(false);
+        jTextField13.setVisible(false);
+        jTextField14.setVisible(false);
+        jTextField15.setVisible(false);
+        jTextField16.setVisible(false);
+        jTextField17.setVisible(false);
+        jTextField18.setVisible(false);
+        jTextField19.setVisible(false);
+        jTextField20.setVisible(false);
+        jTextField21.setVisible(false);
+        jTextField22.setVisible(false);
+       // jList1.setVisible(false);// TODO add your handling code here:
+     
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField3InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField3InputMethodTextChanged
+       
+    }//GEN-LAST:event_jTextField3InputMethodTextChanged
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField18ActionPerformed
+
+    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField21ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -555,6 +1547,26 @@ public class EditarNovoCampeonato extends javax.swing.JFrame {
     private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
