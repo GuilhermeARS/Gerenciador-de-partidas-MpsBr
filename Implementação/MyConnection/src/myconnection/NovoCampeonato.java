@@ -103,19 +103,19 @@ public class NovoCampeonato extends javax.swing.JFrame {
        
        switch (s) { //case de redirecionamento de jFrame
            case "Novo Campeonato 1":
-                new EditarNovoCampeonato().setVisible(true);
+                new EditarNovoCampeonato2().setVisible(true);
                 break;
            case "Novo Campeonato 2":
-                new EditarNovoCampeonato().setVisible(true);
+                new EditarNovoCampeonato2().setVisible(true);
                 break;
            case "Novo Campeonato 3":
-                new EditarNovoCampeonato().setVisible(true);
+                new EditarNovoCampeonato2().setVisible(true);
                 break;
            case "Novo Campeonato 4":
-                new EditarNovoCampeonato().setVisible(true);
+                new EditarNovoCampeonato2().setVisible(true);
                 break;
            case "Novo Campeonato 5":
-                new EditarNovoCampeonato().setVisible(true);
+                new EditarNovoCampeonato2().setVisible(true);
                 break;
        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
